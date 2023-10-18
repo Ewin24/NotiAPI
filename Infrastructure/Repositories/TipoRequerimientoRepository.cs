@@ -8,7 +8,7 @@ using Infrastructure.Data;
 
 namespace Infrastructure.Repositories
 {
-    public class TipoRequerimientoRepository : GenericRepository<TipoRequerimiento>, ITipoRequerimientoRespository
+    public class TipoRequerimientoRepository : GenericRepository<TipoRequerimiento>, ITipoRequerimientoRepository
     {
         private readonly NotiAPIContext _context;
         public TipoRequerimientoRepository(NotiAPIContext context) : base(context)

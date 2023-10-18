@@ -4,10 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Core.Entities;
 
-namespace Core.Interfaces
-{
-    public interface ISubModulosRepository : IGenericRepository<SubModulos>
+namespace Core.Interfaces;
+    public interface IGenericosVsSubmodulosRepository : IGenericRepository<GenericosVsSubmodulos>
     {
 
-    }
 }

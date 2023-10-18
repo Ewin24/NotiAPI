@@ -6,8 +6,8 @@ using Core.Entities;
 
 namespace Core.Interfaces
 {
-    public interface IGenericosVsSubmodulos : IGenericRepository<GenericosVsSubmodulos>
+    public interface IMaestrosVsSubmodulosRepository: IGenericRepository<MaestrosVsSubmodulos>
     {
-
+        
     }
 }

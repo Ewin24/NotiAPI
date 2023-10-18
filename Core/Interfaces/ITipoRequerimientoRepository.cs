@@ -6,7 +6,7 @@ using Core.Entities;
 
 namespace Core.Interfaces
 {
-    public interface ITipoRequerimientoRespository : IGenericRepository<TipoRequerimiento>
+    public interface ITipoRequerimientoRepository : IGenericRepository<TipoRequerimiento>
     {
 
     }
