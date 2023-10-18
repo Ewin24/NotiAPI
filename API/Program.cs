@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 builder.Services.ConfigureRatelimiting();
+builder.Services.AddApplicationServices();
 builder.Services.ConfigureCors();
 
 

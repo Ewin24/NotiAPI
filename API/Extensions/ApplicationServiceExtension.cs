@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AspNetCoreRateLimit;
+using Core.Interfaces;
+using Infrastructure.UnityOfWork;
 // using Core.Interfaces;
 // using Infrastructure.UnitOfWork;
 
@@ -23,10 +25,10 @@ namespace ApiAnimals.Extensions
                 ); //WithHeaders(*accept*, "content-type")
             });
 
-        // public static void AddApplicationServices(this IServiceCollection services)
-        // {
-        //     services.AddScoped<IUnitOfWork, UnitOfWork>();
-        // }
+        public static void AddApplicationServices(this IServiceCollection services)
+        {
+            services.AddScoped<IUnityOfWork, UnityOfWork>();
+        }
 
         public static void ConfigureRatelimiting(this IServiceCollection services)
         {

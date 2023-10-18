@@ -5,10 +5,17 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
+using Infrastructure.Data;
 
 namespace Infrastructure.Repositories;
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {
+    private readonly NotiAPIContext _context;
+    public GenericRepository(NotiAPIContext context)
+    {
+        _context = context;
+    }
+
     public void Add(T entity)
     {
         throw new NotImplementedException();
