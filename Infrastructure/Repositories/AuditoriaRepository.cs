@@ -10,8 +10,10 @@ namespace Infrastructure.Repositories
 {
     public class AuditoriaRepository : GenericRepository<Auditoria>, IAuditoriaRepository
     {
+        private readonly NotiAPIContext _context;
         public AuditoriaRepository(NotiAPIContext context) : base(context)
         {
+            _context = context;
         }
     }
 }

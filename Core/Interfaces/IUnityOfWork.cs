@@ -7,6 +7,7 @@ namespace Core.Interfaces
 {
     public interface IUnityOfWork
     {
+        IAuditoriaRepository Auditorias { get; }
         Task<int> SaveAsync();
     }
 }

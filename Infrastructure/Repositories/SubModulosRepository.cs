@@ -8,10 +8,10 @@ using Infrastructure.Data;
 
 namespace Infrastructure.Repositories
 {
-    public class SubModuloRepository : GenericRepository<SubModulos>, ISubModuloRepository
+    public class SubModulosRepository : GenericRepository<SubModulos>, ISubModulosRepository
     {
         private readonly NotiAPIContext _context;
-        public SubModuloRepository(NotiAPIContext context) : base(context)
+        public SubModulosRepository(NotiAPIContext context) : base(context)
         {
             _context = context;
         }

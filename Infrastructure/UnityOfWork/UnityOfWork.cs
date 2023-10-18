@@ -14,6 +14,8 @@ namespace Infrastructure.UnityOfWork
             
         }
 
+        public IAuditoriaRepository Auditorias => throw new NotImplementedException();
+
         public void Dispose()
         {
             throw new NotImplementedException();
