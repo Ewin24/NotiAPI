@@ -1,3 +1,9 @@
+# comandos para inicializar el proyecto
+- Entrar a API/appsettings y poner las credenciales de MySQL
+- dotnet ef database update --project ./Infrastructure/ --startup-project ./API/
+- dotnet run  --project API/
+ 
+
 # Creación de Solución
 
 ```
