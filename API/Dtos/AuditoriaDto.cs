@@ -7,5 +7,6 @@ namespace API.Dtos;
 public class AuditoriaDto
 {
     public long Id { get; set; }
-    public string Nombre { get; set; }
+    public string NombreUsuario { get; set; }
+    public long DescAccion { get; set; }
 }

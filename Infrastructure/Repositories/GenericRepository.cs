@@ -41,7 +41,7 @@ namespace Infrastructure.Repositories
             //return (IEnumerable<T>)await _context.Paises.FromSqlRaw("SELECT * FROM pais").ToListAsync();
         }
 
-        public virtual async Task<T> GetByIdAsync(int id)
+        public virtual async Task<T> GetByIdAsync(long id)
         {
             return await _context.Set<T>().FindAsync(id);
         }
