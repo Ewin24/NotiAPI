@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.Dtos
 {
-    public class BlockchainDto
+    public class BlockChainDto
     {
         public int Id { get; set; }
         public int IdNotificacion { get; set; }

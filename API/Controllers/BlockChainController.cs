@@ -20,18 +20,18 @@ public class BlockchainController : BaseController
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<BlockchainDto>>> Get()
+    public async Task<ActionResult<IEnumerable<BlockChainDto>>> Get()
     {
         var blockchains = await _unitOfWork.Blockchains.GetAllAsync();
 
         //var paises = await _unitOfWork.Paises.GetAllAsync();
-        return _mapper.Map<List<BlockchainDto>>(blockchains);
+        return _mapper.Map<List<BlockChainDto>>(blockchains);
     }
 
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<BlockChain>> Post(BlockchainDto blockchainDto)
+    public async Task<ActionResult<BlockChain>> Post(BlockChainDto blockchainDto)
     {
         var blockchain = _mapper.Map<BlockChain>(blockchainDto);
         this._unitOfWork.Blockchains.Add(blockchain);
@@ -47,20 +47,20 @@ public class BlockchainController : BaseController
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<BlockchainDto>> Get(int id)
+    public async Task<ActionResult<BlockChainDto>> Get(int id)
     {
         var blockchain = await _unitOfWork.Blockchains.GetByIdAsync(id);
         if (blockchain == null)
         {
             return NotFound();
         }
-        return _mapper.Map<BlockchainDto>(blockchain);
+        return _mapper.Map<BlockChainDto>(blockchain);
     }
     [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<BlockchainDto>> Put(int id, [FromBody] BlockchainDto blockchainDto)
+    public async Task<ActionResult<BlockChainDto>> Put(int id, [FromBody] BlockChainDto blockchainDto)
     {
         if (blockchainDto == null)
         {
